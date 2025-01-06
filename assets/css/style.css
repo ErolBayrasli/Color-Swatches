@@ -1,0 +1,54 @@
+.color-swatch {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+.swatch-red {
+  background-color: red;
+}
+
+.swatch-blue {
+  background-color: blue;
+}
+
+.swatch-green {
+  background-color: green;
+}
+
+.swatch-black {
+  background-color: black;
+}
+
+.shoe-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.swatches-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.featured-shoes img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.review {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+header{
+  background-image: url(../img/texture-04.jpg);
+}
