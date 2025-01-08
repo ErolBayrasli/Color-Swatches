@@ -53,10 +53,10 @@
                     <h2>Design Your Shoe</h2>
                     <p>Click on a swatch to preview the color.</p>
                     <div class="swatches-container">
-                        <div class="color-swatch swatch-red" onclick="changeShoeColor('red')"></div>
-                        <div class="color-swatch swatch-blue" onclick="changeShoeColor('blue')"></div>
-                        <div class="color-swatch swatch-green" onclick="changeShoeColor('green')"></div>
-                        <div class="color-swatch swatch-black" onclick="changeShoeColor('black')"></div>
+                        <div class="color-swatch swatch-red" onclick="changeShoeColor('red')"><img src="assets/img/red dunk.png" class="shoe-image" id="shoeImage" alt=""></div>
+                        <div class="color-swatch swatch-blue" onclick="changeShoeColor('blue')"><img src="assets/img/blue.png" alt="" class="shoe-image" id="shoeImage" ></div>
+                        <div class="color-swatch swatch-green" onclick="changeShoeColor('green')"><img src="assets/img/green dunk.png"  class="shoe-image" id="shoeImage" alt=""></div>
+                        <div class="color-swatch swatch-black" onclick="changeShoeColor('black')"><img src="assets/img/purple.png" class="shoe-image" id="shoeImage" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -80,6 +80,39 @@
                 </div>
             </div>
         </section>
+
+      
+  <div class="shoes">
+    <div class="shoe">
+      <img src="assets/img/red dunk.png" alt="Shoe 1">
+      <h3>Shoe 1</h3>
+      <div class="swatches">
+        <div class="swatch" style="background-color: red;" data-color="Red" data-shoe="Shoe 1">Red</div>
+        <div class="swatch" style="background-color: blue;" data-color="Blue" data-shoe="Shoe 1">Blue</div>
+        <div class="swatch" style="background-color: green;" data-color="Green" data-shoe="Shoe 1">Green</div>
+      </div>
+    </div>
+    <div class="shoe">
+      <img src="https://via.placeholder.com/200" alt="Shoe 2">
+      <h3>Shoe 2</h3>
+      <div class="swatches">
+        <div class="swatch" style="background-color: yellow; color: black;" data-color="Yellow" data-shoe="Shoe 2">Yellow</div>
+        <div class="swatch" style="background-color: purple;" data-color="Purple" data-shoe="Shoe 2">Purple</div>
+        <div class="swatch" style="background-color: orange;" data-color="Orange" data-shoe="Shoe 2">Orange</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay"></div>
+
+  <div class="popup">
+    <span class="close">&times;</span>
+    <p id="color-name">Color Name</p>
+    <p id="shoe-name">Shoe Name</p>
+    <div id="color-box" style="width: 100px; height: 100px; margin: auto; border: 1px solid #000;"></div>
+  </div>
+
+  
 
        
         <!-- Contact Form -->
@@ -105,18 +138,51 @@
 
     
 
-    <!-- Optional JavaScript -->
+
     <script>
         function changeShoeColor(color) {
             const shoeImage = document.getElementById('shoeImage');
             const colorImages = {
-                red: 'shoe-red.jpg',
+                red: 'red dunk.png',
                 blue: 'shoe-blue.jpg',
                 green: 'shoe-green.jpg',
                 black: 'shoe-black.jpg',
             };
             shoeImage.src = colorImages[color] || 'shoe-placeholder.jpg';
         }
+
+        const swatches = document.querySelectorAll('.swatch');
+    const popup = document.querySelector('.popup');
+    const overlay = document.querySelector('.overlay');
+    const colorName = document.getElementById('color-name');
+    const shoeName = document.getElementById('shoe-name');
+    const colorBox = document.getElementById('color-box');
+    const closeBtn = document.querySelector('.popup .close');
+
+    swatches.forEach(swatch => {
+      swatch.addEventListener('click', () => {
+        const color = swatch.getAttribute('data-color');
+        const shoe = swatch.getAttribute('data-shoe');
+        const bgColor = swatch.style.backgroundColor;
+
+        colorName.textContent = `Color: ${color}`;
+        shoeName.textContent = `Shoe: ${shoe}`;
+        colorBox.style.backgroundColor = bgColor;
+
+        popup.style.display = 'block';
+        overlay.style.display = 'block';
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      popup.style.display = 'none';
+      overlay.style.display = 'none';
+    });
+
+    overlay.addEventListener('click', () => {
+      popup.style.display = 'none';
+      overlay.style.display = 'none';
+    });
     </script>
 </body>
 
