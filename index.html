@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erol's Shoes</title>
+    <title>Eggy's Shoe Co.</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -14,7 +14,7 @@
     <!-- Nav Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#"> Eggy's Shoe Co.</a>
+            <a class="navbar-brand" href="#">Eggy's Shoe Co.</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -22,7 +22,6 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#design">Design Your Shoe</a></li>
                     <li class="nav-item"><a class="nav-link" href="#featured">Featured Shoes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
                 </ul>
             </div>
@@ -30,33 +29,31 @@
     </nav>
 
     <!-- Header -->
-     <div class="header">
-    <header class=" text-white text-center py-5">
+    <header class="text-white text-center py-5 bg-primary">
         <div class="container">
             <h1>Welcome to Eggy's Shoe Co.</h1>
             <p>Design shoes that match your style!</p>
         </div>
     </header>
-  </div>
 
     <main class="container my-5">
         <!-- Shoe Design Section -->
         <section id="design" class="mb-5">
-            <div class="row">
-                <!-- Shoe Product -->
-                <div class="col-md-6 d-flex justify-content-center align-items-center">
-                    <img src="assets/img/running-shoes-transparent-download-34.png".jpg" alt="Shoe Design" class="shoe-image" id="shoeImage">
+            <h2 class="text-center mb-4">Design Your Shoe</h2>
+            <div class="row align-items-center">
+                <!-- Shoe Image -->
+                <div class="col-md-6 text-center">
+                    <img src="assets/img/blackdunk.png" id="shoeImage" alt="Shoe Design" class="img-fluid">
                 </div>
 
                 <!-- Color Swatches -->
                 <div class="col-md-6">
-                    <h2>Design Your Shoe</h2>
-                    <p>Click on a swatch to preview the color.</p>
-                    <div class="swatches-container">
-                        <div class="color-swatch swatch-red" onclick="changeShoeColor('red')"><img src="assets/img/red dunk.png" class="shoe-image" id="shoeImage" alt=""></div>
-                        <div class="color-swatch swatch-blue" onclick="changeShoeColor('blue')"><img src="assets/img/blue.png" alt="" class="shoe-image" id="shoeImage" ></div>
-                        <div class="color-swatch swatch-green" onclick="changeShoeColor('green')"><img src="assets/img/green dunk.png"  class="shoe-image" id="shoeImage" alt=""></div>
-                        <div class="color-swatch swatch-black" onclick="changeShoeColor('black')"><img src="assets/img/purple.png" class="shoe-image" id="shoeImage" alt=""></div>
+                    <h3>Select a Color</h3>
+                    <div class="d-flex flex-wrap">
+                        <div class="color-swatch" style="background-color: red; width: 50px; height: 50px; margin: 5px; cursor: pointer;" onmouseover="changeShoeColor('red')"></div>
+                        <div class="color-swatch" style="background-color: blue; width: 50px; height: 50px; margin: 5px; cursor: pointer;" onmouseover="changeShoeColor('blue')"></div>
+                        <div class="color-swatch" style="background-color: green; width: 50px; height: 50px; margin: 5px; cursor: pointer;" onmouseover="changeShoeColor('green')"></div>
+                        <div class="color-swatch" style="background-color: black; width: 50px; height: 50px; margin: 5px; cursor: pointer;" onmouseover="changeShoeColor('black')"></div>
                     </div>
                 </div>
             </div>
@@ -65,58 +62,24 @@
         <!-- Featured Shoes -->
         <section id="featured" class="mb-5">
             <h2 class="text-center mb-4">Featured Shoes</h2>
-            <div class="row featured-shoes">
-                <div class="col-md-4">
-                    <img src="shoe1.jpg" alt="">
-                    <h5 class="text-center">Shoe 1</h5>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <img src="assets/img/red dunk.png" alt="Red Shoe" class="img-fluid">
+                    <h5>Red Shoe</h5>
                 </div>
-                <div class="col-md-4">
-                    <img src="shoe2.jpg" alt="">
-                    <h5 class="text-center">Shoe 2</h5>
+                <div class="col-md-4 text-center">
+                    <img src="assets/img/blue.png" alt="Blue Shoe" class="img-fluid">
+                    <h5>Blue Shoe</h5>
                 </div>
-                <div class="col-md-4">
-                    <img src="shoe3.jpg" alt="">
-                    <h5 class="text-center">Shoe 3</h5>
+                <div class="col-md-4 text-center">
+                    <img src="assets/img/green dunk.png" alt="Green Shoe" class="img-fluid">
+                    <h5>Green Shoe</h5>
                 </div>
             </div>
         </section>
 
-      
-  <div class="shoes">
-    <div class="shoe">
-      <img src="assets/img/red dunk.png" alt="Shoe 1">
-      <h3>Shoe 1</h3>
-      <div class="swatches">
-        <div class="swatch" style="background-color: red;" data-color="Red" data-shoe="Shoe 1">Red</div>
-        <div class="swatch" style="background-color: blue;" data-color="Blue" data-shoe="Shoe 1">Blue</div>
-        <div class="swatch" style="background-color: green;" data-color="Green" data-shoe="Shoe 1">Green</div>
-      </div>
-    </div>
-    <div class="shoe">
-      <img src="https://via.placeholder.com/200" alt="Shoe 2">
-      <h3>Shoe 2</h3>
-      <div class="swatches">
-        <div class="swatch" style="background-color: yellow; color: black;" data-color="Yellow" data-shoe="Shoe 2">Yellow</div>
-        <div class="swatch" style="background-color: purple;" data-color="Purple" data-shoe="Shoe 2">Purple</div>
-        <div class="swatch" style="background-color: orange;" data-color="Orange" data-shoe="Shoe 2">Orange</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="overlay"></div>
-
-  <div class="popup">
-    <span class="close">&times;</span>
-    <p id="color-name">Color Name</p>
-    <p id="shoe-name">Shoe Name</p>
-    <div id="color-box" style="width: 100px; height: 100px; margin: auto; border: 1px solid #000;"></div>
-  </div>
-
-  
-
-       
         <!-- Contact Form -->
-        <section id="contact" class="mb-5">
+        <section id="contact">
             <h2 class="text-center mb-4">Contact Us</h2>
             <form>
                 <div class="mb-3">
@@ -136,53 +99,18 @@
         </section>
     </main>
 
-    
-
-
     <script>
         function changeShoeColor(color) {
             const shoeImage = document.getElementById('shoeImage');
             const colorImages = {
-                red: 'red dunk.png',
-                blue: 'shoe-blue.jpg',
-                green: 'shoe-green.jpg',
-                black: 'shoe-black.jpg',
+                red: 'assets/img/red dunk.png',
+                blue: 'assets/img/blue.png',
+                green: 'assets/img/green dunk.png',
+                black: 'assets/img/blackdunk.png',
             };
-            shoeImage.src = colorImages[color] || 'shoe-placeholder.jpg';
+
+            shoeImage.src = colorImages[color] || 'assets/img/placeholder.png';
         }
-
-        const swatches = document.querySelectorAll('.swatch');
-    const popup = document.querySelector('.popup');
-    const overlay = document.querySelector('.overlay');
-    const colorName = document.getElementById('color-name');
-    const shoeName = document.getElementById('shoe-name');
-    const colorBox = document.getElementById('color-box');
-    const closeBtn = document.querySelector('.popup .close');
-
-    swatches.forEach(swatch => {
-      swatch.addEventListener('click', () => {
-        const color = swatch.getAttribute('data-color');
-        const shoe = swatch.getAttribute('data-shoe');
-        const bgColor = swatch.style.backgroundColor;
-
-        colorName.textContent = `Color: ${color}`;
-        shoeName.textContent = `Shoe: ${shoe}`;
-        colorBox.style.backgroundColor = bgColor;
-
-        popup.style.display = 'block';
-        overlay.style.display = 'block';
-      });
-    });
-
-    closeBtn.addEventListener('click', () => {
-      popup.style.display = 'none';
-      overlay.style.display = 'none';
-    });
-
-    overlay.addEventListener('click', () => {
-      popup.style.display = 'none';
-      overlay.style.display = 'none';
-    });
     </script>
 </body>
 
